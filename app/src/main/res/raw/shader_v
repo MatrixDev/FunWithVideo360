@@ -1,0 +1,11 @@
+uniform mat4 u_MVP;
+
+attribute vec4 a_position;
+attribute vec2 a_texCoord0;
+
+varying vec2 v_textureUV;
+
+void main() {
+    v_textureUV = a_texCoord0;
+    gl_Position = u_MVP * a_position;
+}
